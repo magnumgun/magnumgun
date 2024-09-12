@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Карта OpenStreetMap -->
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_info_panel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Панель с информацией о поездке -->
+    <LinearLayout
+        android:id="@+id/bottom_info_panel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Поле для ввода пункта назначения -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/destination_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите пункт назначения"
+            android:padding="8dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:background="@android:color/transparent"/>
+
+        <!-- Кнопка вызова такси -->
+        <Button
+            android:id="@+id/call_taxi_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Вызвать такси"
+            android:textAllCaps="false"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white" />
+
+        <!-- Кнопка "Найти меня" -->
+        <Button
+            android:id="@+id/find_me_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Найти меня"
+            android:textAllCaps="false"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/teal_200"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

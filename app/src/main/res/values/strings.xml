@@ -1,0 +1,6 @@
+<resources>
+    <!-- Имя приложения -->
+    <string name="app_name">UberClone</string>
+    <!-- Сообщение для карты -->
+    <string name="map_loading">Загрузка карты...</string>
+</resources>
